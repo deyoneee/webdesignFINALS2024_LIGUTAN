@@ -1,0 +1,213 @@
+<html>
+<head>
+    <title>Kuya D's Kitchenware Store - Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Kuya D's Kitchenware Store</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+	<div id="checkout" class="hidden">
+        <h1>Checkout</h1>
+        <h4><ul id="cart"></ul><h4>
+        <h1><p id="total">Total: $0.00</p></h1>
+		<button class="checkout-button" onclick="saveCartAndProceed()">Submit</button>
+
+<script>
+function saveCartAndProceed() {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    window.location.href = 'shipping.html';
+}
+</script>
+
+    </div>
+	
+    <main>
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+               
+				<div class="card">
+                    <img src="knife.jpg" alt="Knives">
+                    <h4>Basic Knives</h4>
+                    <p class="price">$30.00</p>
+                    <button class="add-to-cart" data-name="Basic Knives" data-price="30.00">Add to Cart</button>
+
+                </div>
+              
+				<div class="card">
+                    <img src="qualityknife.jpg" alt="Knives">
+                    <h4>Quality Knives</h4>
+                    <p class="price">$50.00</p>
+                    <button class="add-to-cart" data-name="Quality Knives" data-price="50.00">Add to Cart</button>
+
+                </div>
+				
+				<div class="card">
+                    <img src="premiumknife.jpg" alt="Knives">
+                    <h4>Premium Knives</h4>
+                    <p class="price">$75.00</p>
+                    <button class="add-to-cart" data-name="Premium Knives" data-price="75.00">Add to Cart</button>
+
+                </div>
+				
+				<div class="card">
+                    <img src="basiccolander.jpg" alt="Colanders">
+                    <h4>Basic Colanders</h4>
+                    <p class="price">$15.00</p>
+                    <button class="add-to-cart" data-name="Basic Colanders" data-price="15.00">Add to Cart</button>
+
+                </div>
+		
+				<div class="card">
+                    <img src="qualitycolander.jpg" alt="Colanders">
+                    <h4>Quality Colanders</h4>
+                    <p class="price">$30.00</p>
+                    <button class="add-to-cart" data-name="Quality Colanders" data-price="30.00">Add to Cart</button>
+
+                </div>
+				
+				<div class="card">
+                    <img src="premiumcolander.jpg" alt="Colanders">
+                    <h4>Premium Colanders</h4>
+                    <p class="price">$50.00</p>
+                    <button class="add-to-cart" data-name="Premium Colanders" data-price="50.00">Add to Cart</button>
+
+                </div>
+			
+				<div class="card">
+                    <img src="basicboard.jpg" alt="Chopping Boards">
+                    <h4>Basic Chopping Boards</h4>
+                    <p class="price">$20.00</p>
+                    <button class="add-to-cart" data-name="Basic Chopping Boards" data-price="20.00">Add to Cart</button>
+
+                </div>
+	
+				<div class="card">
+                    <img src="qualityboard.jpg" alt="Chopping Boards">
+                    <h4>Quality Chopping Boards</h4>
+                    <p class="price">$40.00</p>
+                    <button class="add-to-cart" data-name="Quality Chopping Boards" data-price="40.00">Add to Cart</button>
+                </div>
+				
+				<div class="card">
+                    <img src="premiumboard.jpg" alt="Chopping Boards">
+                    <h4>Premium Chopping Boards</h4>
+                    <p class="price">$80.00</p>
+                    <button class="add-to-cart" data-name="Premium Chopping Boards" data-price="80.00">Add to Cart</button>
+                </div>
+			
+				<div class="card">
+                    <img src="basiccutlery.jpg" alt="Cutlery Sets">
+                    <h4>Basic Cutlery Sets</h4>
+                    <p class="price">$40.00</p>
+                    <button class="add-to-cart" data-name="Basic Cutlery Sets" data-price="40.00">Add to Cart</button>
+                </div>
+			
+				<div class="card">
+                    <img src="qualitycutlery.jpg" alt="Cutlery Sets">
+                    <h4>Quality Cutlery Sets</h4>
+                    <p class="price">$80.00</p>
+                    <button class="add-to-cart" data-name="Quality Cutlery Sets" data-price="80.00">Add to Cart</button>
+                </div>
+				
+				<div class="card">
+                    <img src="premiumcutlery.jpg" alt="Cutlery Sets">
+                    <h4>Premium Cutlery Sets</h4>
+                    <p class="price">$120.00</p>
+                    <button class="add-to-cart" data-name="Premium Cutlery Sets" data-price="120.00">Add to Cart</button>
+                </div>
+				
+				<div class="card">
+                    <img src="basicpot.jpg" alt="Pots">
+                    <h4>Basic Pots</h4>
+                    <p class="price">$30.00</p>
+                    <button class="add-to-cart" data-name="Basic Pots" data-price="30.00">Add to Cart</button>
+                </div>
+				
+				<div class="card">
+                    <img src="qualitypot.jpg" alt="Pots">
+                    <h4>Quality Pots</h4>
+                    <p class="price">$60.00</p>
+                    <button class="add-to-cart" data-name="Quality Pots" data-price="60.00">Add to Cart</button>
+                </div>
+			
+				<div class="card">
+                    <img src="premiumpot.jpg" alt="Pots">
+                    <h4>Premium Pots</h4>
+                    <p class="price">$100.00</p>
+                    <button class="add-to-cart" data-name="Premium Pots" data-price="100.00">Add to Cart</button>
+                </div>
+				
+				<div class="card">
+                    <img src="basicpan.jpg" alt="Pans">
+                    <h4>Basic Pans</h4>
+                    <p class="price">$25.00</p>
+                    <button class="add-to-cart" data-name="Basic Pans" data-price="25.00">Add to Cart</button>
+                </div>
+				
+				<div class="card">
+                    <img src="qualitypan.jpg" alt="Pans">
+                    <h4>Quality Pans</h4>
+                    <p class="price">$75.00</p>
+                    <button class="add-to-cart" data-name="Quality Pans" data-price="75.00">Add to Cart</button>
+                </div>
+				
+				<div class="card">
+                    <img src="premiumpan.jpg" alt="Pans">
+                    <h4>Premium Pans</h4>
+                    <p class="price">$150.00</p>
+                    <button class="add-to-cart" data-name="Premium Pots" data-price="150.00">Add to Cart</button>
+                </div>
+				
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Kuya D's Kitchenware Store</p>
+        </div>
+    </footer>
+
+    <script>
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const cart = document.getElementById('cart');
+        const totalDisplay = document.getElementById('total');
+        const checkoutDiv = document.getElementById('checkout');
+
+        let cartItems = [];
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const name = button.getAttribute('data-name');
+                const price = parseFloat(button.getAttribute('data-price'));
+                cartItems.push({ name, price });
+                updateCart();
+            });
+        });
+
+        function updateCart() {
+            cart.innerHTML = '';
+            let total = 0;
+            cartItems.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cart.appendChild(listItem);
+                total += item.price;
+            });
+            totalDisplay.textContent = `Total: $${total.toFixed(2)}`;
+            checkoutDiv.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Shipping Summary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Kuya D's Kitchenware Store</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Order Summary</h2>
+            <div id="receipt">
+            
+            </div>
+            <button onclick="goToHome()">Go to Home</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Kuya D's Kitchenware Store</p>
+        </div>
+    </footer>
+
+    <script>
+        function goToHome() {
+            window.location.href = "home.html";
+        }
+
+        const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+
+        const receiptDiv = document.getElementById('receipt');
+        if (cartItems && cartItems.length > 0) {
+            let total = 0;
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.innerHTML = `
+                    <p>${item.name} - $${item.price.toFixed(2)}</p>
+                `;
+                receiptDiv.appendChild(itemElement);
+                total += item.price;
+            });
+            receiptDiv.innerHTML += `<p>Total: $${total.toFixed(2)}</p>`;
+        } else {
+            receiptDiv.innerHTML = '<p>No items in the cart.</p>';
+        }
+    </script>
+
+</body>
+</html>

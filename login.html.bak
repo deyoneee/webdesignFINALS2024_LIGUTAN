@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuya D's Kitchenware Store - Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Kuya D's Kitchenware Store</h1>
+    <nav>
+      <ul>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Login Form</h2>
+    <form id="login-form" method="POST">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br>
+
+      <br><button type="button" onclick="login()">Login</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Kuya D's Kitchenware Store</p>
+    </div>
+  </footer>
+
+  <script>
+  function login() {
+    // Get user input
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    // Retrieve saved user data from localStorage
+    var savedEmail = localStorage.getItem("email");
+    var savedPassword = localStorage.getItem("password");
+
+    // Check if the input matches the saved data
+    if (email === savedEmail && password === savedPassword) {
+      alert("Login successful!");
+      // Redirect to index.html
+      window.location.href = "home.html";
+    } else {
+      alert("Invalid email or password. Please try again.");
+    }
+  }
+  </script>
+</body>
+</html>
